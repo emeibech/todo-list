@@ -7,7 +7,26 @@
     <title>To-Do List</title>
     <script defer src="main.js"></script>
 </head>
-<body class="bg-blue-200">
-    <h1 class="text-3xl font-bold underline">To-Do List</h1>
+<body class="bg-gray-100">
+    <div class="container border border-black h-screen w-screen flex place-items-center" >
+        <h3 class="list-name text-center text-4xl col-span-full">Do It Today</h3>
+        <div class="list">
+            <div class="flex flex-col items-center gap-3">
+                <p class="text-xl">Do some shit</p>
+                <p class="text-xl">Do some more shit</p>
+                <p class="text-xl">Do some other shit</p>
+                <p class="text-xl">Do some other shit and then that other shit and then some more shit</p>
+            </div>
+        </div>
+        <div class="nav flex flex-grow w-full h-full justify-end px-8 py-2 border border-gray-200">
+            <div class="">
+                    <div class="rounded-full w-16 h-16 bg-green-300 text-7xl shadow-lg cursor-pointer flex flex-col justify-center items-center gap-1.5">
+                    <div class="h-1 w-8 bg-white"></div>
+                    <div class="h-1 w-8 bg-white"></div>
+                    <div class="h-1 w-8 bg-white"></div>
+                    </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
