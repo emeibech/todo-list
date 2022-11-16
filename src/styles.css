@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.container {
+    display: grid;
+    grid-template-rows: 15% 70% 15%;
+}
+
+.list {
+    /* border: 1px solid seagreen; */
+    width: clamp(250px, calc(250px + 20vw), 280px);
+}
+
+p {
+    text-align: center;
+}
