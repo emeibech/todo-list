@@ -7,9 +7,11 @@
     grid-template-rows: 15% 70% 15%;
 }
 
-.list {
+.task {
     width: clamp(250px, calc(250px + 20vw), 280px);
 }
+
+.btn {transition: all 250ms;}
 
 .btn-hide {
     width: 0;
@@ -28,14 +30,14 @@
     margin-right: 6rem;
     text-align: center;
     opacity: 0;
-    transform: translateX(100%);
+    transform: translateY(10%);
 }
 
 .animate-options {
     width: 8rem;
     overflow: visible;
     opacity: 1;
-    transform: translateX(0%);
+    transform: translateY(0%);
     transition: all 500ms;
 }
 
@@ -43,4 +45,58 @@
     background-color: rgb(134 239 172);
     border-radius: 16px;
     padding: 4px;
+}
+
+.options button:hover {
+    background-color: rgb(112, 228, 154);
+}
+
+.options button:active {
+    background-color: rgb(98, 221, 143);
+}
+
+.new-list-overlay {
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid skyblue;
+    position: absolute;
+    background-color: rgba(112, 228, 203, 0.1);
+    display: grid;
+    place-items: center;
+}
+
+form {
+    padding-block: 4rem;
+    padding-inline: 4rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 1rem;
+}
+
+label {font-size: 1.5rem;}
+
+input {
+    padding-inline: 0.5rem;
+    font-size: 1.1rem;
+    width: clamp(150px, calc(150px + 12vw), 300px);
+    border-bottom: 1px solid rgb(170, 170, 170);
+}
+
+input:focus {
+    outline: none;
+}
+
+.option-btn {
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+    background-color: aquamarine;
+    font-size: 1.1rem;
+}
+
+@media screen and (max-height: 680px) {
+    .wrapper {
+        grid-template-rows: 20% 60% 20%;
+    }
 }

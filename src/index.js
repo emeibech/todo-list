@@ -1,4 +1,4 @@
 import './styles.css';
-import { btn } from "./modules/btn";
+import { def } from "./default/default";
 
-document.querySelector('.btn').addEventListener('click', btn);
+document.addEventListener('DOMContentLoaded', def);

@@ -1,5 +1,6 @@
 import { nav } from "./nav";
 import { animateOptions } from "./animateOptions";
+import { options } from "./options";
 
 export const btn = () => {
     const button = document.querySelector('.btn');
@@ -7,4 +8,5 @@ export const btn = () => {
     nav()
     setTimeout(animateOptions, 50);
     button.removeEventListener('click', btn);
+    document.querySelector('.options').addEventListener('click', options);
 }
