@@ -7,6 +7,6 @@ export const btn = () => {
     button.classList.add('btn-hide');
     nav()
     setTimeout(animateOptions, 50);
-    button.removeEventListener('click', btn);
+    // button.removeEventListener('click', btn);
     document.querySelector('.options').addEventListener('click', options);
 }
