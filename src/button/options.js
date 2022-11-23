@@ -1,4 +1,4 @@
-import { viewLists } from "../optionsUI/viewLists";
+import { viewLists } from "../options/viewLists";
 
 const removeOptions = () => {
     const options = document.querySelector('.options');

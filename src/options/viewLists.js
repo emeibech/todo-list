@@ -1,4 +1,5 @@
 import { list } from "../list/lists";
+import { selectList } from "./selectList";
 
 const animateViewList = () => {
     document.querySelector('.options-wrapper').classList.add('options-wrapper-animate');
@@ -22,5 +23,5 @@ export const viewLists = () => {
     }
     overlay.append(viewList)
     parent.appendChild(overlay)
-    console.log(list[0])
+    viewList.addEventListener('click', selectList)
 }
