@@ -1,3 +1,4 @@
+import { viewLists } from "../optionsUI/viewLists";
 
 const removeOptions = () => {
     const options = document.querySelector('.options');
@@ -19,6 +20,7 @@ const optionsLogic = (e) => {
 
     if (e.target.textContent == 'View Lists') {
         removeOptions();
+        viewLists();
     }
 }
 
