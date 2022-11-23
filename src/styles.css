@@ -8,10 +8,6 @@
     overflow: hidden;
 }
 
-.task {
-    width: clamp(250px, calc(250px + 20vw), 280px);
-}
-
 .btn {
     overflow: hidden;
     transition: all 500ms;
@@ -129,6 +125,28 @@ input:focus {
     padding-inline: 1rem;
     background-color: aquamarine;
     font-size: 1.1rem;
+}
+
+/* tasks */
+.task {
+    width: clamp(135px, calc(145px + 26vh), 420px);
+    /* border: 1px dotted seagreen; */
+}
+
+.task-wrapper {
+    /* border: 1px solid slateblue; */
+    display: grid;
+    grid-template-columns: 90% 10%;
+    cursor: pointer;
+}
+
+.task-wrapper p {
+    padding-inline: 0.5rem;
+}
+.task-wrapper button {
+    display: grid;
+    place-items: center;
+    /* border: 1px solid fuchsia; */
 }
 
 /* @media screen and (max-height: 680px) {

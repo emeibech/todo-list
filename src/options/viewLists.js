@@ -11,7 +11,7 @@ export const viewLists = () => {
     overlay.classList.add('overlay')
     const viewList = document.createElement('div')
     viewList.classList.add('options-wrapper', 'shadow-lg')
-    setTimeout(animateViewList, 0)
+    setTimeout(animateViewList, 10)
     for(let i = 0; i < list.length; i++) {
         let button = document.createElement('button')
         if(list[i].getIsActive() == true) {
