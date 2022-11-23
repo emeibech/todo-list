@@ -12,24 +12,25 @@
     width: clamp(250px, calc(250px + 20vw), 280px);
 }
 
-.btn {transition: all 250ms;}
+.btn {
+    overflow: hidden;
+    transition: all 500ms;
+}
 
 .btn-hide {
     width: 0;
     height: 0;
-    transition: all 250ms;
+    transition: all 500ms;
 }
 
 .options {
-    width: 5rem;
-    overflow: hidden;
+    width: 6rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     color: white;
     font-weight: bolder;
     text-align: center;
-    opacity: 0;
     transform: translateY(10%);
     position: absolute;
     bottom: 4%;
@@ -37,8 +38,6 @@
 
 .animate-options {
     width: 8rem;
-    overflow: visible;
-    opacity: 1;
     transform: translateY(0%);
     transition: all 500ms;
 }
@@ -47,17 +46,17 @@
     width: 0;}
 
 .options button {
-    background-color: rgb(134 239 172);
+    background-color: rgb(110, 231, 183);
     border-radius: 16px;
     padding: 4px;
 }
 
 .options button:hover {
-    background-color: rgb(112, 228, 154);
+    background-color: rgb(115, 236, 188);
 }
 
 .options button:active {
-    background-color: rgb(98, 221, 143);
+    background-color: rgb(105, 226, 178);
 }
 
 
@@ -67,7 +66,7 @@
     height: 100vh;
     border: 1px solid skyblue;
     position: absolute;
-    background-color: rgba(112, 228, 203, 0.1);
+    background-color: rgba(236, 253, 245, 0.1);
     display: grid;
     place-items: center;
 }
@@ -77,7 +76,7 @@
     height: 0;
     padding-block: 0;
     padding-inline: 0;
-    background-color: rgb(112, 228, 203);
+    background-color: rgb(167, 243, 208);
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -91,7 +90,7 @@
     height: clamp(300px, calc(180px + 24vh), 420px);
     padding-block: 2rem;
     padding-inline: 2rem;
-    transition: ease-in-out 500ms;
+    transition: all 500ms;
 }
 
 .list-item {
@@ -104,12 +103,12 @@
     background-color: rgb(240, 240, 240);
 }
 
-#active {background-color: rgb(0, 255, 255);}
+#active {background-color: rgb(0, 235, 235);}
 #active:hover {background-color: rgb(0, 245, 245);}
-#active:active {background-color: rgb(0, 235, 235);}
+#active:active {background-color: rgb(0, 230, 230);}
 
-.list-item:hover {background-color: rgb(235, 235, 235)}
-.list-item:active {background-color: rgb(230, 230, 230)}
+.list-item:hover {background-color: rgb(230, 230, 230)}
+.list-item:active {background-color: rgb(225, 225, 225)}
 
 label {font-size: 1.5rem;}
 
