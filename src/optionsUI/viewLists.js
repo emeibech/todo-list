@@ -1,11 +1,16 @@
 import { list } from "../list/lists";
 
+const animateViewList = () => {
+    document.querySelector('.options-wrapper').classList.add('options-wrapper-animate');
+}
+
 export const viewLists = () => {
     const parent = document.querySelector('.wrapper')
     const overlay = document.createElement('div')
     overlay.classList.add('overlay')
     const viewList = document.createElement('div')
     viewList.classList.add('options-wrapper')
+    setTimeout(animateViewList, 0)
     for(let i = 0; i < list.length; i++) {
         let button = document.createElement('button')
         if(list[i].getIsActive() == true) {
