@@ -4,10 +4,6 @@ const listFactory = (name) => {
     const _tasksArr = [];
     let _isActive = true;
 
-    const addToList = (() => {
-        list.push(name);
-    })();
-
     const addTask = (task) => {
         _tasksArr.push(task);
     }
@@ -42,11 +38,12 @@ const listFactory = (name) => {
 }
 
 const defaultList = listFactory('Do It Now');
+list.push(defaultList);
 defaultList.addTask('Do some shit');
 defaultList.addTask('Do more shit');
 defaultList.addTask('Do some other shit');
 defaultList.addTask('Do some more other shit and then some more');
-
+console.log(list)
 
 
 export { list, listFactory, defaultList }
