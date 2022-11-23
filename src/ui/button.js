@@ -1,6 +1,6 @@
 import { btn } from "../button/btn";
 
-export const button = (parent) => {
+export const button = () => {
     const nav = document.createElement('div');
     nav.classList.add('nav', 'flex', 'w-full', 'h-full', 'justify-end', 'px-8', 'py-4');
     const button = document.createElement('button');
@@ -13,6 +13,6 @@ export const button = (parent) => {
     line2.classList.add('h-1', 'w-7', 'bg-white');
     button.append(line0, line1, line2);
     nav.appendChild(button);
-    parent.appendChild(nav);
+    document.querySelector('.wrapper').appendChild(nav);
     button.addEventListener('click', btn);
 }

@@ -1,5 +1,6 @@
 import { nav } from "./nav";
 import { options } from "./options";
+import { returnActiveList } from "../auxiliary/returnActiveList";
 
 const animateOptions = () => {
     document.querySelector('.options').classList.add('animate-options');

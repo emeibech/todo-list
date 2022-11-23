@@ -43,11 +43,16 @@ for (let i = 0; i < 20; i++) {
     const list1 = listFactory(`Do it Later ${i + 1}`);
     list.push(list1);
 }
-list[5].setActiveTrue();
+list[0].setActiveTrue();
 
 defaultList.addTask('Do some shit');
 defaultList.addTask('Do more shit');
 defaultList.addTask('Do some other shit');
 defaultList.addTask('Do some more other shit and then some more');
+list[1].addTask('Yeye bonel')
+list[1].addTask('Go do something')
+list[2].addTask('I\'m tired just wanna sleep')
+list[2].addTask('Get some more sleep')
+list[2].addTask('And sleep some more')
 
 export { list, listFactory, defaultList }
