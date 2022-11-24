@@ -6,11 +6,11 @@ const deleteTaskUI = (e) => {
 }
 
 export const deleteTask = (e) => {
-    console.log(returnActiveList().getTasks())
+    // console.log(returnActiveList().getTasks())
     if(e.target.localName == 'div') {
         const task = e.target.parentElement.previousSibling.textContent;
         returnActiveList().deleteTask(task) //delete task from the object
         deleteTaskUI(e);
     }
-    console.log(returnActiveList().getTasks())
+    // console.log(returnActiveList().getTasks())
 }

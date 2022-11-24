@@ -1,6 +1,7 @@
 import '../styles.css'
 import { returnActiveList } from "../auxiliary/returnActiveList";
 import { deleteTask } from "../list/deleteTask";
+import { crossOut } from "./crossOut";
 
 export const tasks = () => {
     const task = document.createElement('div')
@@ -21,4 +22,5 @@ export const tasks = () => {
     }
     document.querySelector('.wrapper').appendChild(task);
     document.querySelector('.task').addEventListener('click', deleteTask)
+    document.querySelector('.task').addEventListener('click', crossOut)
 }

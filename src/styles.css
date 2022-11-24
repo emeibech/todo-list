@@ -152,11 +152,20 @@ input:focus {
 
 .task-wrapper p {
     padding-inline: 0.5rem;
+    transition: all 250ms;
 }
+
 .task-wrapper button {
     display: grid;
     place-items: center;
     /* border: 1px solid fuchsia; */
+}
+
+.line-through {
+    text-decoration: line-through;
+    opacity: 0.5;
+    color: rgb(80, 80, 80);
+    transition: all 250ms;
 }
 
 /* @media screen and (max-height: 680px) {
