@@ -16,7 +16,6 @@ body {
     display: grid;
     grid-template-rows: 20% 60% 20%;
     overflow: hidden;
-    border: 1px solid salmon;
 }
 
 .btn {
