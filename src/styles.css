@@ -9,8 +9,8 @@
 
 .btn {
     overflow: hidden;
-    position: fixed;
-    bottom: 8%;
+    /* position: fixed;
+    bottom: 8%; */
     transition: all 500ms;
 }
 
@@ -209,5 +209,5 @@ path {stroke-width: 1.8;}
         box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);	
     }
 
-    .btn {position: static;}
+    /* .btn {position: static;} */
 }
