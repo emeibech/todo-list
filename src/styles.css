@@ -4,14 +4,14 @@
 
 .wrapper {
     display: grid;
-    grid-template-rows: 15% 70% 15%;
+    grid-template-rows: 20% 60% 20%;
     overflow: hidden;
 }
 
 .btn {
     overflow: hidden;
     position: fixed;
-    bottom: 8%;
+    bottom: 10%;
     transition: all 500ms;
 }
 
@@ -191,7 +191,7 @@ input:focus {
 
 path {stroke-width: 1.8;}
 
-@media screen and (min-width: 640px) {
+@media only screen and (min-width: 640px) {
 
     body {
         background-color: #ddedea;
@@ -202,7 +202,7 @@ path {stroke-width: 1.8;}
     }
 
     .wrapper {
-        max-width: 640px;
+        width: 640px;
         height: 768px;
         background-color: rgb(240, 240, 240);
         border-radius: 3rem;
@@ -210,5 +210,5 @@ path {stroke-width: 1.8;}
         box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);	
     }
 
-    .btn {position: sticky;}
+    .btn {position: static;}
 }
