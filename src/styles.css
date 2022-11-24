@@ -90,7 +90,8 @@
     transition: all 500ms;
 }
 
-#form {
+#form-list,
+#form-task {
     padding-block: 1rem;
     height: clamp(100px, calc(45px + 24vh), 420px);
     flex-direction: column;
@@ -130,7 +131,9 @@ input:focus {
     outline: none;
 }
 
-.option-btn, #form button {
+.option-btn, 
+#form-list button,
+#form-task button {
     padding-block: 0.5rem;
     padding-inline: 1rem;
     background-color: rgb(20, 224, 224);

@@ -1,5 +1,6 @@
 import { viewLists } from "../options/viewLists";
 import { newTask } from "../options/newTask";
+import { newList } from "../options/newList";
 
 const removeOptions = () => {
     const options = document.querySelector('.options');
@@ -18,7 +19,7 @@ const optionsLogic = (e) => {
 
     if (e.target.textContent == 'New List') {
         removeOptions();
-        
+        newList();
     }
 
     if (e.target.textContent == 'View Lists') {
