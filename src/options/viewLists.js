@@ -1,5 +1,6 @@
 import { list } from "../list/lists";
 import { selectList } from "./selectList";
+import { deleteList } from "../list/deleteList";
 
 const animateViewList = () => {
     document.querySelector('.options-wrapper').classList.add('options-wrapper-animate');
@@ -28,6 +29,7 @@ export const viewLists = () => {
         close.appendChild(overlay)
         button.append(p, close)
         viewList.appendChild(button);
+        overlay.addEventListener('click', deleteList)
     }
     overlay.append(viewList)
     parent.appendChild(overlay)
