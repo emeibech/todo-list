@@ -164,12 +164,14 @@ input:focus {
     /* border: 1px solid fuchsia; */
 }
 
-.line-through {
+.line {
     text-decoration: line-through;
     opacity: 0.5;
     color: rgb(80, 80, 80);
     transition: all 250ms;
 }
+
+path {stroke-width: 1.8;}
 
 /* @media screen and (max-height: 680px) {
     .wrapper {

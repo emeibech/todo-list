@@ -1,6 +1,6 @@
 
 const lineThrough = (e) => {
-    e.target.classList.toggle('line-through')
+    e.target.classList.toggle('line')
 }
 
 export const crossOut = (e) => {
