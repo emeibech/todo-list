@@ -33,7 +33,6 @@ export const newTask = () => {
     setAttributes(input, {'type': 'text', 'id': 'newTask', 'name': 'newTask'})
     const button = document.createElement('button')
     button.textContent = 'Add Task'
-    button.classList.add('add-task')
     form.append(label, input, button)
     overlay.appendChild(form)
     parent.appendChild(overlay)

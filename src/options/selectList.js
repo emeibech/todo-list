@@ -3,7 +3,7 @@ import { returnActiveList } from "../auxiliary/returnActiveList";
 import { animateOptions, removeOverlay, removeListTitle, changeListTitle, removeTasks, changeTasks } from "./optionsFunctions";
 
 const selectList = (e) => {
-    if(e.target.classList.contains('list-item')) {
+    if(e.target.parentElement.classList.contains('list-item')) {
         document.querySelector('#active').removeAttribute('id', 'active');
         if(returnActiveList().getIsActive() == true) {
             returnActiveList().setActiveFalse();
@@ -12,7 +12,7 @@ const selectList = (e) => {
         for(let i = 0; i < list.length; i++) {
             if (e.target.textContent == list[i].name) {
                 list[i].setActiveTrue();
-                e.target.setAttribute('id', 'active')
+                e.target.parentElement.setAttribute('id', 'active')
             }
         }
 

@@ -1,6 +1,7 @@
+import { returnActiveList } from "../auxiliary/returnActiveList";
 import { list, listFactory } from "../list/lists";
 import { setAttributes } from "../auxiliary/setAttributes";
-import { animateOptions, removeOverlay } from "../options/optionsFunctions";
+import { animateOptions, removeOverlay, removeListTitle, changeListTitle, removeTasks, changeTasks } from "../options/optionsFunctions";
 
 const animateForm = () => {
     document.querySelector('.options-wrapper').classList.add('options-wrapper-animate');
@@ -13,6 +14,12 @@ const addNewList = (e) => {
     list.push(newList);
     setTimeout(animateOptions, 10);
     setTimeout(removeOverlay, 500);
+    returnActiveList().setActiveFalse();
+    newList.setActiveTrue();
+    removeListTitle();
+    changeListTitle();
+    removeTasks();
+    changeTasks();
 }
 
 export const newList = () => {
@@ -28,8 +35,7 @@ export const newList = () => {
     const input = document.createElement('input')
     setAttributes(input, {'type': 'text', 'id': 'newList', 'name': 'newList'})
     const button = document.createElement('button')
-    button.textContent = 'Add Task'
-    button.classList.add('add-task')
+    button.textContent = 'Add List'
     form.append(label, input, button)
     overlay.appendChild(form)
     parent.appendChild(overlay)

@@ -103,12 +103,27 @@
 .list-item {
     /* border: 1px solid saddlebrown; */
     /* font-weight: bolder; */
+    width: clamp(6rem, calc(6rem + 24vh), 12rem);
     color: rgb(44, 44, 44);
     padding-block: 0.25rem;
     padding-inline: 1rem;
     border-radius: 3rem;
     background-color: rgb(240, 240, 240);
+    display: grid;
+    grid-template-columns: 80% 20%;
+    gap: 1rem;
 }
+
+.list-item div {
+    /* border: 1px solid forestgreen; */
+    display: grid;
+    place-items: center;
+}
+
+.list-item svg {fill: rgb(187, 61, 61);}
+
+.list-item path {stroke: rgb(240, 240, 240);}
+
 
 #active {background-color: rgb(0, 235, 235);}
 #active:hover {background-color: rgb(0, 245, 245);}
@@ -172,7 +187,6 @@ input:focus {
 }
 
 path {stroke-width: 1.8;}
-
 /* @media screen and (max-height: 680px) {
     .wrapper {
         grid-template-rows: 20% 60% 20%;
