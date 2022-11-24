@@ -10,6 +10,8 @@
 
 .btn {
     overflow: hidden;
+    position: fixed;
+    bottom: 8%;
     transition: all 500ms;
 }
 
@@ -95,7 +97,7 @@
 #form-task {
     padding-block: 1rem;
     height: clamp(100px, calc(45px + 24vh), 420px);
-    overflow: auto;
+    overflow: hidden;
     justify-content: center;
     /* font-weight: bolder; */
     color: rgb(60, 60, 60);
@@ -196,7 +198,7 @@ path {stroke-width: 1.8;}
         display: grid;
         place-content: center;
         place-items: center;
-        margin-block: 2rem;
+        margin-top: 2rem;
     }
 
     .wrapper {
@@ -207,4 +209,6 @@ path {stroke-width: 1.8;}
         --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
         box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);	
     }
+
+    .btn {position: sticky;}
 }
