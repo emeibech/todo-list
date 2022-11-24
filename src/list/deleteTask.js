@@ -7,7 +7,7 @@ const deleteTaskUI = (e) => {
 
 export const deleteTask = (e) => {
     // console.log(returnActiveList().getTasks())
-    if(e.target.localName == 'div') {
+    if(e.target.classList.contains('close')) {
         const task = e.target.parentElement.previousSibling.textContent;
         returnActiveList().deleteTask(task) //delete task from the object
         deleteTaskUI(e);
