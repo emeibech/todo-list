@@ -83,11 +83,20 @@
 }
 
 .options-wrapper-animate {
-    width: clamp(300px, calc(180px + 24vh), 420px);
-    height: clamp(300px, calc(180px + 24vh), 420px);
+    width: clamp(300px, calc(180px + 23vh), 420px);
+    height: clamp(300px, calc(180px + 23vh), 420px);
     padding-block: 2rem;
     padding-inline: 2rem;
     transition: all 500ms;
+}
+
+#form {
+    padding-block: 1rem;
+    height: clamp(100px, calc(45px + 24vh), 420px);
+    flex-direction: column;
+    place-items: center;
+    /* font-weight: bolder; */
+    color: rgb(60, 60, 60);
 }
 
 .list-item {
@@ -112,18 +121,19 @@ label {font-size: 1.5rem;}
 input {
     padding-inline: 0.5rem;
     font-size: 1.1rem;
-    width: clamp(150px, calc(150px + 12vw), 300px);
+    width: clamp(180px, calc(150px + 30vw), 300px);
     border-bottom: 1px solid rgb(170, 170, 170);
+    background-color: rgb(167, 243, 208);
 }
 
 input:focus {
     outline: none;
 }
 
-.option-btn {
+.option-btn, #form button {
     padding-block: 0.5rem;
     padding-inline: 1rem;
-    background-color: aquamarine;
+    background-color: rgb(20, 224, 224);
     font-size: 1.1rem;
 }
 
