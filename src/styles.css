@@ -10,7 +10,7 @@
 .btn {
     overflow: hidden;
     position: fixed;
-    bottom: 10%;
+    bottom: 8%;
     transition: all 500ms;
 }
 
@@ -86,7 +86,7 @@
 
 .options-wrapper-animate {
     width: clamp(300px, calc(180px + 23vh), 420px);
-    height: clamp(300px, calc(180px + 23vh), 420px);
+    height: clamp(280px, calc(120px + 23vh), 420px);
     padding-block: 2rem;
     padding-inline: 2rem;
     transition: all 500ms;

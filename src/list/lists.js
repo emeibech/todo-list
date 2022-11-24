@@ -41,6 +41,6 @@ const defaultList = listFactory('Do It Now');
 list.push(defaultList);
 list[0].setActiveTrue();
 
-defaultList.addTask('Click the green button to add a new task or create a new list [4]');
+defaultList.addTask('Click the green button to add a new task or create a new list [5]');
 
 export { list, listFactory }
