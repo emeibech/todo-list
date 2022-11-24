@@ -203,7 +203,10 @@ input:focus {
     transition: all 250ms;
 }
 
-path {stroke-width: 1.8;}
+path {
+    stroke-width: 1.8;
+    stroke: rgb(80, 80, 80);
+}
 
 @media only screen and (min-width: 640px) {
 
