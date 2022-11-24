@@ -43,4 +43,14 @@ const changeTasks = () => {
     document.querySelector('.wrapper').insertBefore(task, btn);
 }
 
-export { animateOptions, removeOverlay, removeListTitle, changeListTitle, removeTasks, changeTasks }
+const cancelOptions = () => {
+    document.querySelector('.overlay').addEventListener('click', (e) => {
+        console.log(e.target)
+        if(e.target.classList.contains('overlay')) {
+            setTimeout(animateOptions, 10);
+            setTimeout(removeOverlay, 500);
+        }
+    })
+}
+
+export { cancelOptions, animateOptions, removeOverlay, removeListTitle, changeListTitle, removeTasks, changeTasks }

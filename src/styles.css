@@ -95,8 +95,8 @@
 #form-task {
     padding-block: 1rem;
     height: clamp(100px, calc(45px + 24vh), 420px);
-    flex-direction: column;
-    place-items: center;
+    overflow: auto;
+    justify-content: center;
     /* font-weight: bolder; */
     color: rgb(60, 60, 60);
 }

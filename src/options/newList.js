@@ -1,7 +1,7 @@
 import { returnActiveList } from "../auxiliary/returnActiveList";
 import { list, listFactory } from "../list/lists";
 import { setAttributes } from "../auxiliary/setAttributes";
-import { animateOptions, removeOverlay, removeListTitle, changeListTitle, removeTasks, changeTasks } from "../options/optionsFunctions";
+import { cancelOptions, animateOptions, removeOverlay, removeListTitle, changeListTitle, removeTasks, changeTasks } from "../options/optionsFunctions";
 
 const animateForm = () => {
     document.querySelector('.options-wrapper').classList.add('options-wrapper-animate');
@@ -41,4 +41,5 @@ export const newList = () => {
     parent.appendChild(overlay)
     setTimeout(animateForm, 10)
     button.addEventListener('click', addNewList)
+    cancelOptions()
 }
