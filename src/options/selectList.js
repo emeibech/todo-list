@@ -3,24 +3,26 @@ import { returnActiveList } from "../auxiliary/returnActiveList";
 import { animateOptions, removeOverlay, removeListTitle, changeListTitle, removeTasks, changeTasks } from "./optionsFunctions";
 
 const selectList = (e) => {
-    document.querySelector('#active').removeAttribute('id', 'active');
-    if(returnActiveList().getIsActive() == true) {
-        returnActiveList().setActiveFalse();
-    }
-
-    for(let i = 0; i < list.length; i++) {
-        if (e.target.textContent == list[i].name) {
-            list[i].setActiveTrue();
-            e.target.setAttribute('id', 'active')
+    if(e.target.classList.contains('list-item')) {
+        document.querySelector('#active').removeAttribute('id', 'active');
+        if(returnActiveList().getIsActive() == true) {
+            returnActiveList().setActiveFalse();
         }
-    }
 
-    setTimeout(animateOptions, 100);
-    setTimeout(removeOverlay, 500);
-    removeListTitle();
-    changeListTitle();
-    removeTasks();
-    changeTasks();
+        for(let i = 0; i < list.length; i++) {
+            if (e.target.textContent == list[i].name) {
+                list[i].setActiveTrue();
+                e.target.setAttribute('id', 'active')
+            }
+        }
+
+        setTimeout(animateOptions, 100);
+        setTimeout(removeOverlay, 500);
+        removeListTitle();
+        changeListTitle();
+        removeTasks();
+        changeTasks();
+    }
 }
 
 export {selectList, removeTasks, changeTasks}
