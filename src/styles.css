@@ -29,7 +29,7 @@
     text-align: center;
     transform: translateY(10%);
     position: absolute;
-    bottom: 4%;
+    bottom: 40%;
 }
 
 .animate-options {
@@ -60,9 +60,9 @@
 .overlay {
     width: 100vw;
     height: 100vh;
-    border: 1px solid skyblue;
+    /* border: 1px solid skyblue; */
     position: absolute;
-    background-color: rgba(236, 253, 245, 0.1);
+    /* background-color: rgba(236, 253, 245, 0.1); */
     display: grid;
     place-items: center;
 }
@@ -188,8 +188,23 @@ input:focus {
 }
 
 path {stroke-width: 1.8;}
-/* @media screen and (max-height: 680px) {
-    .wrapper {
-        grid-template-rows: 20% 60% 20%;
+
+@media screen and (min-width: 640px) {
+
+    body {
+        background-color: #ddedea;
+        display: grid;
+        place-content: center;
+        place-items: center;
+        margin-block: 2rem;
     }
-} */
+
+    .wrapper {
+        max-width: 640px;
+        height: 768px;
+        background-color: rgb(240, 240, 240);
+        border-radius: 3rem;
+        --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);	
+    }
+}

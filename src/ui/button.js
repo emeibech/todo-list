@@ -2,7 +2,7 @@ import { btn } from "../button/btn";
 
 export const button = () => {
     const nav = document.createElement('div');
-    nav.classList.add('nav', 'flex', 'w-full', 'h-full', 'justify-end', 'px-8', 'py-4');
+    nav.classList.add('nav', 'flex', 'w-full', 'h-full', 'justify-end', 'px-8', 'py-4', 'relative');
     const button = document.createElement('button');
     button.classList.add('btn', 'rounded-full', 'w-14', 'h-14', 'bg-green-300', 'shadow-lg', 'flex', 'flex-col', 'justify-center', 'items-center', 'gap-1.5', 'active:bg-green-400',);
     const line0 = document.createElement('div');
