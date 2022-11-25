@@ -175,6 +175,7 @@ input:focus {
 .task {
     width: clamp(135px, calc(145px + 26vh), 420px);
     min-height: var(--doc-height);
+    margin-top: 2rem;
     /* border: 1px dotted seagreen; */
 }
 
