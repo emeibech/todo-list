@@ -1,5 +1,6 @@
 import { list } from "./lists";
 import { removeChildren } from "../auxiliary/removeChildren";
+import { populateStorage } from "../localStorage/storage";
 
 export const deleteList = (e) => {
     if(list.length > 1) {
@@ -30,5 +31,7 @@ export const deleteList = (e) => {
             parent.appendChild(button);
             overlay.addEventListener('click', deleteList)
         }
+
+        populateStorage()
     }
 }

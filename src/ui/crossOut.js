@@ -1,4 +1,5 @@
 import { returnActiveList } from "../auxiliary/returnActiveList";
+import { populateStorage } from "../localStorage/storage";
 
 const lineThrough = (e) => {
     if(e.target.classList.contains('line')) {
@@ -19,4 +20,5 @@ export const crossOut = (e) => {
         }
         setTimeout(lineThrough(e), 10)
     }
+    populateStorage()
 }

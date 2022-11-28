@@ -2,6 +2,7 @@ import { returnActiveList } from "../auxiliary/returnActiveList";
 import { list, listFactory } from "../list/lists";
 import { setAttributes } from "../auxiliary/setAttributes";
 import { cancelOptions, animateOptions, removeOverlay, removeListTitle, changeListTitle, removeTasks, changeTasks } from "../options/optionsFunctions";
+import { populateStorage } from "../localStorage/storage";
 
 const animateForm = () => {
     document.querySelector('.options-wrapper').classList.add('options-wrapper-animate');
@@ -20,6 +21,7 @@ const addNewList = (e) => {
     changeListTitle();
     removeTasks();
     changeTasks();
+    populateStorage()
 }
 
 export const newList = () => {

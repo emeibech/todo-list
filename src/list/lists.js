@@ -52,14 +52,6 @@ const defaultList = listFactory('Do It Now');
 list.push(defaultList);
 list[0].setActiveTrue();
 
-// for(let i = 0; i < 5; i++) {
-//     const project = listFactory(`Do it Later${i + 1}`)
-//     list.push(project)
-//     for(let i = 0; i < 5; i++) {
-//         project.addTask(`Bring me $${i + 1} or I'll kick you in the nuts`)
-//     }
-// }
-
 defaultList.addTask('Click the green button to add a new task or create a new list');
 
 export { list, listFactory }

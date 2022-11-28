@@ -1,6 +1,7 @@
 import { list } from "../list/lists";
 import { returnActiveList } from "../auxiliary/returnActiveList";
 import { animateOptions, removeOverlay, removeListTitle, changeListTitle, removeTasks, changeTasks } from "./optionsFunctions";
+import { populateStorage } from "../localStorage/storage";
 
 const selectList = (e) => {
     if(e.target.parentElement.classList.contains('list-item')) {
@@ -22,6 +23,7 @@ const selectList = (e) => {
         changeListTitle();
         removeTasks();
         changeTasks();
+        populateStorage()
     }
 }
 

@@ -1,6 +1,7 @@
 import { returnActiveList } from "../auxiliary/returnActiveList";
 import { setAttributes } from "../auxiliary/setAttributes";
 import { cancelOptions, changeTasks, removeTasks, removeOverlay, animateOptions } from "./optionsFunctions";
+import { populateStorage } from "../localStorage/storage";
 
 const animateForm = () => {
     document.querySelector('.options-wrapper').classList.add('options-wrapper-animate');
@@ -17,6 +18,7 @@ const addNewTask = (e) => {
     setTimeout(removeOverlay, 500);
     removeTasks()
     changeTasks()
+    populateStorage()
 }
 
 export const newTask = () => {
