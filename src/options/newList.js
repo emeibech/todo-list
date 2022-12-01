@@ -10,13 +10,20 @@ const animateForm = () => {
  
 const addNewList = (e) => {
     e.preventDefault()
-    const listName = document.querySelector('#newList').value;
-    const newList = listFactory(`${listName}`);
-    list.push(newList);
+    let listName = document.querySelector('#newList').value;
+    if (listName !== '') {
+      const newList = listFactory(`${listName}`);
+      list.push(newList);
+      newList.setActiveTrue();
+    } else {
+      const newList = listFactory(`To do list`);
+      list.push(newList);
+      newList.setActiveTrue();
+    }
+
     setTimeout(animateOptions, 10);
     setTimeout(removeOverlay, 500);
     returnActiveList().setActiveFalse();
-    newList.setActiveTrue();
     removeListTitle();
     changeListTitle();
     removeTasks();
@@ -35,7 +42,7 @@ export const newList = () => {
     label.textContent = 'New List'
     label.setAttribute('for', 'newList')
     const input = document.createElement('input')
-    setAttributes(input, {'type': 'text', 'id': 'newList', 'name': 'newList'})
+    setAttributes(input, { 'type': 'text', 'id': 'newList', 'name': 'newList' })
     const button = document.createElement('button')
     button.textContent = 'Add List'
     form.append(label, input, button)
